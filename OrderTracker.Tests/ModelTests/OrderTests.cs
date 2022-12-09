@@ -38,5 +38,18 @@ namespace OrderTracker.Tests
       //Assert
       Assert.AreEqual(updatedName, result);
     }
+    [TestMethod]
+    public void SetProperty_SetPropertyOfBread_Int()
+    {
+      //Arrange
+      string date = "12/01/2022";
+      Order newOrder = new Order(date);
+      //Act
+      int breadAmount = 5;
+      newOrder.Bread = breadAmount;
+      int result = newOrder.Bread;
+      //Assert
+      Assert.AreEqual(breadAmount, result);
+    }
   }
 }
