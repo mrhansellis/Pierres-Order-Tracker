@@ -69,5 +69,18 @@ namespace ToDoList.Tests
       //Assert
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      //Arrange
+      string name01 = "Hans";
+      string name02 = "Paul";
+      Vendor newVendor1 = new Vendor(name01);
+      Vendor newVendor2 = new Vendor(name02);
+      //Act
+      Vendor result = Vendor.Find(2);
+      //Assert
+      Assert.AreEqual(newVendor2, result);
+    }
   }
 }
