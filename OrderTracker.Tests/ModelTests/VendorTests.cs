@@ -54,7 +54,6 @@ namespace OrderTracker.Tests
       //Act
       List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
       List<Vendor> result = Vendor.GetAll();
-      Console.WriteLine(result);
       //Assert
       CollectionAssert.AreEqual(newList, result);
     }

@@ -6,8 +6,13 @@ using System;
 namespace OrderTracker.Tests
 {
   [TestClass]
-  public class OrderTests
+  public class OrderTests : IDisposable
   {
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
+
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
@@ -50,6 +55,23 @@ namespace OrderTracker.Tests
       int result = newOrder.Bread;
       //Assert
       Assert.AreEqual(breadAmount, result);
+    }
+    [TestMethod]
+    public void GetAll_ReturnsAllOrderObjects_OrderList()
+    {
+      {
+      //Arrange
+      string order01 = "12/01/2022";
+      string order02 = "12/02/2022";
+      Order newOrder1 = new Order(order01);
+      Order newOrder2 = new Order(order02);
+      //Act
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+      List<Order> result = Order.GetAll();
+      Console.WriteLine(result);
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+      }
     }
   }
 }
