@@ -3,7 +3,7 @@ using OrderTracker.Models;
 using System.Collections.Generic;
 using System;
 
-namespace ToDoList.Tests
+namespace OrderTracker.Tests
 {
   [TestClass]
   public class VendorTests : IDisposable
