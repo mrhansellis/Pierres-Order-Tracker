@@ -12,7 +12,7 @@ namespace ToDoList.Tests
     {
       Vendor.ClearAll();
     }
-    
+
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
@@ -57,6 +57,17 @@ namespace ToDoList.Tests
       Console.WriteLine(result);
       //Assert
       CollectionAssert.AreEqual(newList, result);
+    }
+    [TestMethod]
+    public void GetId_ReturnsVendorId_Int()
+    {
+      //Arrange
+      string name = "hans";
+      Vendor newVendor = new Vendor(name);
+      //Act
+      int result = newVendor.Id;
+      //Assert
+      Assert.AreEqual(1, result);
     }
   }
 }
