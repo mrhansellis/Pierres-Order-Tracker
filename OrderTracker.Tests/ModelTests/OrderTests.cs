@@ -25,5 +25,18 @@ namespace OrderTracker.Tests
       //Assert
       Assert.AreEqual(name, result);
     }
+    [TestMethod]
+    public void OrderConstructor_SetsOrderName_String()
+    {
+      //Arrange
+      string name = "test name";
+      Order newOrder = new Order(name);
+      //Act
+      string updatedName = "new test name";
+      newOrder.OrderDate = updatedName;
+      string result = newOrder.OrderDate;
+      //Assert
+      Assert.AreEqual(updatedName, result);
+    }
   }
 }

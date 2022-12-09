@@ -4,7 +4,7 @@ namespace OrderTracker.Models
 {
   public class Order
   {
-    public string OrderDate { get; }
+    public string OrderDate { get; set; }
     public Order(string orderDate)
     {
       OrderDate = orderDate;
