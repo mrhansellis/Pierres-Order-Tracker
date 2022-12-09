@@ -25,5 +25,18 @@ namespace ToDoList.Tests
       //Assert
       Assert.AreEqual(name, result);
     }
+    [TestMethod]
+    public void VendorClass_SetCategoryName_String()
+    {
+      //Arrange
+      string name = "test name";
+      Vendor newVendor = new Vendor(name);
+      //Act
+      string updatedName = "new test name";
+      newVendor.VendorName = updatedName;
+      string result = newVendor.VendorName;
+      //Assert
+      Assert.AreEqual(updatedName, result);
+    }
   }
 }
