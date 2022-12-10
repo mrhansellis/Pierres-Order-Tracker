@@ -36,6 +36,5 @@ namespace OrderTracker.Models
     {
       Orders.Add(order);
     }
-
   }
 }

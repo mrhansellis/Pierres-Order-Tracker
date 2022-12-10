@@ -113,7 +113,6 @@ namespace OrderTracker.Tests
       List<Order> result = newVendor.Orders;
       //Arrange
       CollectionAssert.AreEqual(newList, result);
-
     }
   }
 }
