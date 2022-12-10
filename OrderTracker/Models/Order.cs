@@ -10,11 +10,13 @@ namespace OrderTracker.Models
     public int Bread { get; set; }
     public int Pastry { get; set; }
     public int Price { get; set; }
+    public int Id { get; }
         
     public Order(string orderDate)
     {
       OrderDate = orderDate;
       _instances.Add(this);
+      Id = _instances.Count;
     }
 
     public static List<Order> GetAll()

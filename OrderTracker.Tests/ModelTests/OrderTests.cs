@@ -73,5 +73,18 @@ namespace OrderTracker.Tests
       CollectionAssert.AreEqual(newList, result);
       }
     }
+    [TestMethod]
+    public void GetId_ReturnsOrderId_Int()
+    {
+      {
+      //Arrange
+      string name = "12/01/2022";
+      Order newOrder = new Order(name);
+      //Act
+      int result = newOrder.Id;
+      //Assert
+      Assert.AreEqual(1, result);
+    }
+    }
   }
 }
