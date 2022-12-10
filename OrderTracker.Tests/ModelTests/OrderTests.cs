@@ -84,7 +84,36 @@ namespace OrderTracker.Tests
       int result = newOrder.Id;
       //Assert
       Assert.AreEqual(1, result);
+      }
     }
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      //Arrange
+      string name01 = "Hans";
+      string name02 = "Paul";
+      Order newOrder1 = new Order(name01);
+      Order newOrder2 = new Order(name02);
+      //Act
+      Order result = Order.Find(2);
+      //Assert
+      Assert.AreEqual(newOrder2, result);
+    }
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor()
+    {
+      //Arrange
+      string date = "12/01/2022";
+      Order newOrder = new Order(date);
+      List<Order> newList = new List<Order> { newOrder };
+      string vendorName = "Hans";
+      Vendor newVendor = new Vendor(vendorName);
+      newVendor.AddOrder(newOrder);
+      //Act
+      List<Order> result = newVendor.Orders;
+      //Arrange
+      CollectionAssert.AreEqual(newList, result);
+
     }
   }
 }
