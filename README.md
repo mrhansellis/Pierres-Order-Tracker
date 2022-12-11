@@ -13,7 +13,7 @@
 
 ## Description
 
-Pierre's order tracker is designed as a simple database tool that allows a user to track vendors and purchase orders.
+Pierre's order tracker is designed as a simple database tool that allows a user to track vendors and purchase orders. Demonstration of RESTful routing practices and thorough testing of models.
 
 ## Setup/Installation Requirements
 
