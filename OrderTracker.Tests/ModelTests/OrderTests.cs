@@ -44,17 +44,17 @@ namespace OrderTracker.Tests
       Assert.AreEqual(updatedName, result);
     }
     [TestMethod]
-    public void SetProperty_SetPropertyOfBread_Int()
+    public void SetProperty_SetPropertyOfFlour_Int()
     {
       //Arrange
       string date = "12/01/2022";
       Order newOrder = new Order(date);
       //Act
-      int breadAmount = 5;
-      newOrder.Bread = breadAmount;
-      int result = newOrder.Bread;
+      int flourAmount = 5;
+      newOrder.Flour = flourAmount;
+      int result = newOrder.Flour;
       //Assert
-      Assert.AreEqual(breadAmount, result);
+      Assert.AreEqual(flourAmount, result);
     }
     [TestMethod]
     public void GetAll_ReturnsAllOrderObjects_OrderList()

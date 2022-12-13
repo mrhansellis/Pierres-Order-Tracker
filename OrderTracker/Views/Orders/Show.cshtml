@@ -13,6 +13,9 @@
     <h1>Order Details: </h1>
 
     <h2>@Model["order"].OrderDate</h2>
+    <h2>Flour: @Model["order"].Flour</h2>
+    <h2>Butter: @Model["order"].Butter</h2>
+    <h2>Total: @Model["order"].Price</h2>
     <h3>Vendor: @Model["vendor"].VendorName</h3>
 
     <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
